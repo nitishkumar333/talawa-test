@@ -135,10 +135,7 @@ describe("src -> utilities -> encodedImageStorage -> uploadEncodedImage", () => 
 
   it("should create new image and return the pointer to that binary data and decrease the previous image count", async () => {
     try {
-      const img =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAA" +
-        "AAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAWSURB" +
-        "VBhXY2Rg+PefAQiYQAQDAwMDAB0KAgGZq0EVAAAAAElFTkSuQmCC";
+      const img = "data:image/png;base64,TEMP_IMAGE_ENCODED_BINARY_DATA";
 
       const encodedImageBefore = await EncodedImage.findOne({
         fileName: testPreviousImagePath,
